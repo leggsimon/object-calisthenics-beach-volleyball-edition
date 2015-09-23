@@ -12,7 +12,7 @@ describe Team do
     male_player   = double :player, :in_a_team? => false, place_in_team: nil, gender: :male
     female_player = double :player, :in_a_team? => false, place_in_team: nil, gender: :female
     5.times { team.add male_player }
-    2.times { team.add female_player }
+    5.times { team.add female_player }
     expect(team).to be_valid
   end
 

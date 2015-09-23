@@ -27,10 +27,16 @@ describe Player do
       expect(player).to be_in_a_team
     end
 
-    it 'knows what team it is in' do
+    it "knows what team they're is in" do
       team = double :team
       player.place_in_team team
       expect(player.team).to eq team
+    end
+  end
+
+  context 'availibility' do
+    it 'is available on initialize' do
+      expect(player).to be_available
     end
   end
 end

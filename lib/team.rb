@@ -5,6 +5,8 @@ class Team
     min_player_count:  7
   }
 
+  attr_reader :players
+
   def initialize
     @players = []
   end
@@ -17,12 +19,12 @@ class Team
   end
 
   def valid?
-    full_enough? && !full? && sufficient_gender_balance
+    full_enough? && sufficient_gender_balance?
   end
 
   private
 
-  def sufficient_gender_balance
+  def sufficient_gender_balance?
     player_count(:male) >= 2 && player_count(:female) >= 2
   end
 
@@ -30,12 +32,8 @@ class Team
     players.select { |p| p.gender == gender }.count
   end
 
-  def full?
-    players.count == max_player_count
-  end
-
   def full_enough?
-    players.count >= min_player_count
+    players.count >= min_player_count && players.count <= max_player_count
   end
 
   def player_count_below_maximum?
@@ -49,7 +47,4 @@ class Team
   def min_player_count
     RULES[:min_player_count]
   end
-
-  attr_reader :players
-
 end

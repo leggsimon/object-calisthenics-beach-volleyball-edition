@@ -6,6 +6,7 @@ class Player
     @gender = gender
     @in_a_team = false
     @team = nil
+    @games_suspended_for = 0
   end
 
   def in_a_team?
@@ -17,11 +18,18 @@ class Player
     self.team = team
   end
 
+  def available?
+    games_suspended_for == 0
+  end
+
+  def suspend suspension_length
+    self.games_suspended_for = suspension_length
+  end
+
   private
 
   attr_writer :team
-
-  attr_accessor :in_a_team
+  attr_accessor :in_a_team, :available, :games_suspended_for
 
   def self.male
     new :male
@@ -30,7 +38,5 @@ class Player
   def self.female
     new :female
   end
-
-
 
 end

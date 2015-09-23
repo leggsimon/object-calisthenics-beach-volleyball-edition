@@ -1,3 +1,8 @@
+[![Code Climate](https://codeclimate.com/github/leggsimon/object-calisthenics-beach-volleyball-edition/badges/gpa.svg)](https://codeclimate.com/github/leggsimon/object-calisthenics-beach-volleyball-edition)
+
+[![Test Coverage](https://codeclimate.com/github/leggsimon/object-calisthenics-beach-volleyball-edition/badges/coverage.svg)](https://codeclimate.com/github/leggsimon/object-calisthenics-beach-volleyball-edition/coverage)
+
+
 # Object Calisthenics: Beach Volleyball Edition
 <img src=https://www.hwhc.co.uk/wp-content/uploads/2015/07/21_cover_image_small_BigBeachVolleyball.jpg width="300"></img>
 > "I love beach volleyball"  

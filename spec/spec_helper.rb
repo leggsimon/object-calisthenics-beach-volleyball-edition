@@ -1,5 +1,8 @@
 require 'simplecov'
+require "codeclimate-test-reporter"
+
 SimpleCov.start
+CodeClimate::TestReporter.start
 
 Dir["./lib/*.rb"].each {|file| require file }
 

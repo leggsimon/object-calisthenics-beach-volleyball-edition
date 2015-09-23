@@ -22,8 +22,15 @@ describe Player do
     end
 
     it 'can be placed in a team' do
-      player.place_in_team
+      team = double :team
+      player.place_in_team team
       expect(player).to be_in_a_team
+    end
+
+    it 'knows what team it is in' do
+      team = double :team
+      player.place_in_team team
+      expect(player.team).to eq team
     end
   end
 end

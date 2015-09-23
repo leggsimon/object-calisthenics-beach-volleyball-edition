@@ -13,7 +13,7 @@ class Team
     raise "This player is already in a team" if player.in_a_team?
     raise "Team is full" unless player_count_below_maximum?
     players << player
-    player.place_in_team
+    player.place_in_team self
   end
 
   def valid?

@@ -1,5 +1,5 @@
+[![Build Status](https://travis-ci.org/leggsimon/object-calisthenics-beach-volleyball-edition.svg?branch=master)](https://travis-ci.org/leggsimon/object-calisthenics-beach-volleyball-edition)
 [![Code Climate](https://codeclimate.com/github/leggsimon/object-calisthenics-beach-volleyball-edition/badges/gpa.svg)](https://codeclimate.com/github/leggsimon/object-calisthenics-beach-volleyball-edition)
-
 [![Test Coverage](https://codeclimate.com/github/leggsimon/object-calisthenics-beach-volleyball-edition/badges/coverage.svg)](https://codeclimate.com/github/leggsimon/object-calisthenics-beach-volleyball-edition/coverage)
 
 

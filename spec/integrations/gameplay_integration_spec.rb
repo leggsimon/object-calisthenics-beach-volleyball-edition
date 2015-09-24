@@ -32,45 +32,25 @@ describe "BeachVollyball" do
 
   context 'match' do
     it 'requires 2 valid teams' do
-      team1 = Team.new
-      team2 = Team.new
-      4.times do
-        team1.add Player.male
-        team1.add Player.female
-        team2.add Player.male
-        team2.add Player.female
-      end
-      match = Match.new(team1, team2)
+      match = build_match
       expect(match).to be_able_to_go_ahead
     end
 
     it 'can suspend a player' do
-      team1  = Team.new
-      team2  = Team.new
-      player = Player.male
-      4.times do
-        team1.add Player.male
-        team1.add Player.female
-        team2.add Player.male
-        team2.add Player.female
-      end
-      team1.add player
+      team1  = build_team
+      team2  = build_team
       match = Match.new(team1, team2)
+      player = Player.male
+      team1.add player
       match.suspend_player 3, player
       expect(player).not_to be_available
     end
 
     it 'checks availibility of players' do
-      team1  = Team.new
-      team2  = Team.new
+      team1  = build_team
+      team2  = build_team
       player = Player.male
       player.suspend(3)
-      4.times do
-        team1.add Player.male
-        team1.add Player.female
-        team2.add Player.male
-        team2.add Player.female
-      end
       team1.add player
       match = Match.new(team1, team2)
       expect(match).not_to be_able_to_go_ahead
